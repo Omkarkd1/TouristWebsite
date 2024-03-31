@@ -1,0 +1,144 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+nav
+{
+    margin: 0px;
+    top:auto;
+    background-color: lightgrey;
+}
+nav img
+{
+    float: left;
+    margin: 10px;    
+}
+nav h3
+{
+    padding:20px;
+}
+aside
+{
+    float: left;
+    width: 20%;
+    height: 923px;
+    background-color: #f0f0f0;
+}
+aside ul
+{
+    list-style: none;
+}
+aside ul li
+{
+    margin-left: 0px;
+    font-size: 20px;
+    align-items: center;
+}
+aside ul li a
+{
+    text-decoration: none;
+}
+a:link,a:visited{
+    color: black;
+}
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+aside button
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    font-size: 20px;
+    width: 100px;
+    padding: 15px;
+}
+aside button:hover
+{
+    outline: 10px solid black;
+    background-color: gray;
+    color: white;
+    transition: .50s;
+}
+nav
+{
+    margin: 0px;
+    top:auto;
+    background-color: lightgrey;
+}
+nav img
+{
+    float: left;
+    margin: 10px;    
+}
+nav h3
+{
+    padding:20px;
+}
+aside ul
+{
+    list-style: none;
+}
+aside ul li a
+{
+    text-decoration: none;
+}
+a:link,a:visited{
+    color: black;
+}
+main
+{
+    float: left;
+    width: 75%;
+    margin-left: 10px;
+    padding: 15px;
+    background-color: #f0f0f0;
+}
+#content
+{
+    height: 100%;
+    width:100%;
+}
+.footer
+{
+    clear: left;
+    width:100%; 
+    background-color: lightgray;
+    padding: 20px;
+}
+.footer span:hover
+{   
+    background-color:gray;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+#grid
+{
+    margin-top: 10px;
+    height: 100%;
+    width:100%;
+}
+#grid_row
+{
+    margin-left: 40px;
+    width: 100%;
+}
+#grid_row #col{
+    float: left;
+    width: 30%;
+    margin-right: 5px;
+}
+#grid_row #col h1{
+    background-color: lightgray;
+}
+
+#grid_row #col h1:hover{
+    background-color:gray;
+    color: white;
+}
+img
+{
+    border-radius: 10px;
+}

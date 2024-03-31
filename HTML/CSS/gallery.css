@@ -1,0 +1,23 @@
+.w100
+{
+    width:100%;
+}
+.col
+{
+    float: left;
+    width:100%;
+}
+#lft
+{
+    width:40%;
+    height:278px;
+    padding: 10px;
+    float: left;
+}
+#rig
+{
+    width:40%;
+    height:278px;
+    padding: 10px;
+    float: right;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS\style.css">
+    <link rel="stylesheet" href="css\hotel.css?v=<?php echo time(); ?>">
+</head>
+<body>
+    <nav>
+        <img src="Image/logo.jpg" alt="" width="40px" height="40px">
+        <h3 style="margin-left: 20px;">Puneshwar</h3>
+    </nav>
+    <div id="content">
+        <aside class="full-page">
+            <ul>
+                <li><a href="index.html"><button>Home</button></a><br><br>
+                <li><a href="Heritage.html"><button>Heritage</button></a><br><br>
+                <li><a href="#"><button>Hotel</button></a><br><br>
+                <li><a href="Gallary.html"><button>Gallary</button></a><br><br>
+            </ul>
+        </aside>
+        <main>
+            <div id="Regform">
+                <h3 align="center">Hotel Registration</h3>
+                <form action="php/registration.php" name="Hotel Registration" method="post">
+                <table frame="box" width="90%" align="center" id="tbl" cellspacing="10px">
+                    <tr>
+                    <td>
+                    <table frame="box" align="center" width="90%" cellpadding="10px" id="pi">
+                        <tr>
+                            <th colspan="2">
+                                <h3 align="center">Personal Information</h3>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td >
+                                <label for="fname">First Name :</label>
+                            </td>
+                            <td align="left">
+                                <input type="text" name="fname" placeholder="Enter First Name" id="fname" requiredpattern="[A-Za-z]{1,25}">
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td >
+                                <label for="lname">Last Name :</label>
+                            </td>
+                            <td align="left">
+                                <input type="text" name="lname" placeholder="Enter Last Name" id="fname"required pattern="[A-Za-z]{1,25}">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td >
+                                <label for="mno">Mobile Number :</label>
+                            </td>
+                            <td align="left">
+                                <input type="text" name="mno" placeholder="Enter Mobile Number" id="mno" required pattern="[6-9]{1}[0-9]{9}">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td >
+                                <label for="emailid">Email Id :</label>
+                            </td>
+                            <td align="left">
+                                <input type="email" name="emailid" placeholder="Enter Email Id" id="fname" requiredpattern="[6-9]{1}[0-9]{9}">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td >
+                                <label for="adrno">Adhaar Number:</label>
+                            </td>
+                            <td align="left">
+                                <input type="text" name="adrno" placeholder="Adhaar No" id="fname" requiredpattern="[0-9]{12}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="color: red;">* Please carry your Adhaar card at the time of check in</td>
+                        </tr>
+                        </td>
+                        </tr>
+                        <tr>
+                        <table frame="box" align="center" width="90%" cellpadding="10px" id="pi">
+                            <tr>
+                                <th colspan="2">
+                                    <h3 align="center">Hotel Details</h3>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td><label for="Hotel">Hotel : </label></td>
+                                <td><select name="Hotel" >
+                                    <option value="" selected>select Hotel</option>
+                                    <option value="Royal Pleasure">Royal Pleasure</option>
+                                    <option value="Cloud Mist">Cloud Mist</option>
+                                    <option value="Wonder Lust">Wonder Lust</option>
+                                    <option value="The Oberoy">The Oberoy</option>
+                                    <option value="Hogwards">Hogwards</option>
+                                </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="Room">Room : </label></td>
+                                <td><input type="radio" name="room" value="Delux">Delux<br>
+                                <input type="radio" name="room" value="Super Delux">Super Delux<br>
+                                <input type="radio" name="room" value="Luxury">Luxury sweet</td>
+                            </tr>
+                            <tr>
+                                <td><label for="sdate">From Date : </label></td>
+                                <td><input type="date" name="sdate" id="sdate"></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><label for="ldate">To Date : </label></td>
+                                <td><input type="date" name="ldate" id="ldate"></td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="Nop">Number of people visiting : </label></td>
+                                <td><input type="number" name="Nop" id="Nop" max="4" min="1"></td>
+                            </tr>
+
+                        </table>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                <input type="reset" value="reset" id="btn">
+                                <input type="submit" value="submit" id="btn">                            
+                            </th>
+                        </tr>
+                    </table>
+                </table>
+                </form>
+            </div>
+        </main>  
+            
+    </div>
+    <hr style="clear: left" size="0px">
+    
+    <div class="footer" align="center">
+        <span >Contact Us <br> Mobile No : xxxx-xxxx-xx <br>Email Id : abc@xyz</span>
+    </div>
+</body>
+</html>
