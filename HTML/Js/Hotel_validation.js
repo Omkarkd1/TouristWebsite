@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    var flag=0
-    var namepattern=/(^['A-Za-z']{1,25})$/
+    var flag=0  // If flag is 0 enable submit else disable
+    var namepattern=/(^['A-Za-z']{1,25})$/                                  
     // First Name Validation starts here
     $("#fname").change(function(){
         let fname=$("#fname").val();
@@ -89,8 +89,23 @@ $(document).ready(function(){
         }
     })
     // Hotel validation ends here
-        
+    
+    // Start Date validation starts here
+    var currentDate = new Date();
+    $("#sdate").datepicker({
+        minDate: currentDate
+    })
+    // Start Date validation ends here
+
+    // Last Date validation starts here
+    var currentDate = new Date();
+    $("#ldate").datepicker({
+        minDate: currentDate
+    })
+    // Last Date validation ends here
 });
+
+// Room Validation starts here
 function validate()
 {
     flag=0
@@ -111,3 +126,4 @@ function validate()
         return false
     return true
 }
+// Room validation ends here
