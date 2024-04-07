@@ -1,9 +1,10 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="CSS\style.css">
     <link rel="stylesheet" href="css\hotel.css?v=<?php echo time(); ?>">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="Js/Hotel_validation.js"></script>
 </head>
 <body>
     <nav>
@@ -22,7 +23,7 @@
         <main>
             <div id="Regform">
                 <h3 align="center">Hotel Registration</h3>
-                <form action="php/registration.php" name="Hotel Registration" method="post">
+                <form action="php/registration.php" name="Hotel Registration" method="post" onsubmit="return validate()">
                 <table frame="box" width="90%" align="center" id="tbl" cellspacing="10px">
                     <tr>
                     <td>
@@ -32,50 +33,61 @@
                                 <h3 align="center">Personal Information</h3>
                             </th>
                         </tr>
+                        <!-- First Name form Element -->
                         <tr>
                             <td >
                                 <label for="fname">First Name :</label>
                             </td>
                             <td align="left">
-                                <input type="text" name="fname" placeholder="Enter First Name" id="fname" requiredpattern="[A-Za-z]{1,25}">
+                                <input type="text" name="fname" placeholder="Enter First Name" id="fname" required>
                             </td>
                         </tr>
+                        <tr><td id="fnameError" class="Error" colspan="2"></td></tr>
                         
+                        <!-- Last Name form element  -->
                         <tr>
                             <td >
                                 <label for="lname">Last Name :</label>
                             </td>
                             <td align="left">
-                                <input type="text" name="lname" placeholder="Enter Last Name" id="fname"required pattern="[A-Za-z]{1,25}">
+                                <input type="text" name="lname" placeholder="Enter Last Name" id="lname" required>
                             </td>
                         </tr>
+                        <tr><td id="lnameError" class="Error" colspan="2"></td></tr>
 
+                        <!-- Mobile Number form element -->
                         <tr>
                             <td >
                                 <label for="mno">Mobile Number :</label>
                             </td>
                             <td align="left">
-                                <input type="text" name="mno" placeholder="Enter Mobile Number" id="mno" required pattern="[6-9]{1}[0-9]{9}">
+                                <input type="text" name="mno" placeholder="Enter Mobile Number" id="mno" required >
                             </td>
                         </tr>
+                        <tr><td id="mnoError" class="Error" colspan="2"></td></tr>
 
+                        <!-- Email Id form element -->
                         <tr>
                             <td >
                                 <label for="emailid">Email Id :</label>
                             </td>
                             <td align="left">
-                                <input type="email" name="emailid" placeholder="Enter Email Id" id="fname" requiredpattern="[6-9]{1}[0-9]{9}">
+                                <input type="email" name="emailid" placeholder="Enter Email Id" id="eid" required>
                             </td>
                         </tr>
+                        <tr><td id="eidError" class="Error" colspan="2"></td></tr>
 
+                        <!-- Adhaar Number form element -->
                         <tr>
                             <td >
                                 <label for="adrno">Adhaar Number:</label>
                             </td>
                             <td align="left">
-                                <input type="text" name="adrno" placeholder="Adhaar No" id="fname" requiredpattern="[0-9]{12}">
+                                <input type="text" name="adrno" placeholder="Adhaar No" id="addrNo" required>
                             </td>
                         </tr>
+                        <tr><td id="addrNoError" class="Error" colspan="2"></td></tr>
+
                         <tr>
                             <td colspan="2" style="color: red;">* Please carry your Adhaar card at the time of check in</td>
                         </tr>
@@ -88,9 +100,10 @@
                                     <h3 align="center">Hotel Details</h3>
                                 </th>
                             </tr>
+                            <!-- Hotel Form element -->
                             <tr>
                                 <td><label for="Hotel">Hotel : </label></td>
-                                <td><select name="Hotel" >
+                                <td><select name="Hotel" id="hotel" >
                                     <option value="" selected>select Hotel</option>
                                     <option value="Royal Pleasure">Royal Pleasure</option>
                                     <option value="Cloud Mist">Cloud Mist</option>
@@ -100,20 +113,25 @@
                                 </select>
                                 </td>
                             </tr>
+                            <tr><td id="hotelError" class="Error" colspan="2"></td></tr>
                             <tr>
                                 <td><label for="Room">Room : </label></td>
-                                <td><input type="radio" name="room" value="Delux">Delux<br>
-                                <input type="radio" name="room" value="Super Delux">Super Delux<br>
-                                <input type="radio" name="room" value="Luxury">Luxury sweet</td>
+                                <td>
+                                    <input type="radio" name="room" id="r1" value="Delux">Delux<br>
+                                    <input type="radio" name="room" id="r2" value="Super Delux">Super Delux<br>
+                                    <input type="radio" name="room" id="r3" value="Luxury">Luxury sweet
+                                </td>
                             </tr>
+                            <tr><td id="roomError" class="Error" colspan="2"></td></tr>
+
                             <tr>
                                 <td><label for="sdate">From Date : </label></td>
-                                <td><input type="date" name="sdate" id="sdate"></td>
+                                <td><input type="date" name="sdate" id="sdate" required></td>
                             </tr>
                             
                             <tr>
                                 <td><label for="ldate">To Date : </label></td>
-                                <td><input type="date" name="ldate" id="ldate"></td>
+                                <td><input type="date" name="ldate" id="ldate" required></td>
                             </tr>
 
                             <tr>
